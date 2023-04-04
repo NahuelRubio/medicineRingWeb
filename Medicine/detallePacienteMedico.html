@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Importamos jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Importamos Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-auth-compat.js"></script>
+    <!-- Firebase Storage -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-storage.js"></script>
+    <script>
+        // Obtenemos el ID del paciente de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const pacienteId = urlParams.get('id');
+        // Configuramos Firebase
+        var firebaseConfig = {
+            apiKey: "AIzaSyC33rG5Or8Lz_pe9d-PQ4-24QPYGR2y55o",
+            authDomain: "medicinering.firebaseapp.com",
+            projectId: "medicinering",
+            storageBucket: "medicinering.appspot.com",
+            messagingSenderId: "659612075181",
+            appId: "1:659612075181:web:8a3b7c7487655935553224"
+        };
+        firebase.initializeApp(firebaseConfig);
+        // Obtener instancia de Firestore
+        var db = firebase.firestore();
+
+        $(document).ready(function () {
+            // Obtener referencia a la tabla
+            var table = $('#tabla-pacientes');
+
+
+            function check_cookie_name(name) {
+                var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+                if (match) {
+                    return (match[2]);
+                }
+                else {
+                    console.log('--something went wrong---');
+                }
+            }
+
+            // Obtener colección de pacientes con filtro de ID de médico
+            db.collection("medicamento").where("id", "==", pacienteId).get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    // Obtener datos del paciente
+                    var data = doc.data();
+
+                    // Crear fila de la tabla
+                    var row = $('<tr>');
+
+                    // Agregar datos a la fila
+                    row.append($('<td>').text(data.medicamento));
+                    row.append($('<td>').text(data.gramaje));
+                    row.append($('<td>').text(data.tipo));
+                    row.append($('<td>').text(data.hora));
+                    
+                    // Agregar fila a la tabla
+                    table.append(row);
+                });
+            });
+        });
+    </script>
+
+    <title>MedicineRing</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!--
+
+TemplateMo 586 Scholar
+
+https://templatemo.com/tm-586-scholar
+
+-->
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <h1>MedicineRing</h1>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="indexCorrectoMedico.html">Inicio</a></li>
+                            <li class="scroll-to-section"><a href="pacientes_SoyMedico.html "
+                                    class="active">Pacientes</a></li>
+                            <li class="scroll-to-section"><a href="addPacienteMedico.html">Añadir paciente</a></li>
+                            <li class="scroll-to-section"><a href="about_us_sesion_Medico.html">Sobre nostros</a></li>
+                            <li class="scroll-to-section"><a href="index.html">Cerrar Sesión</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <div class="main-banner" id="top">
+
+    </div>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 1.2em;
+            font-family: Arial, sans-serif;
+            border-radius: 4px;
+            border-spacing: 0px;
+        }
+
+        thead {
+            display: table-header-group;
+            vertical-align: middle;
+            border-color: inherit;
+            border-collapse: separate;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 12px;
+            border-top: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        th {
+            background-color: hsl(250, 56%, 68%);
+            color: white;
+        }
+
+        thead:first-child tr:first-child th:first-child,
+        tbody:first-child tr:first-child td:first-child {
+            border-radius: 4px 0 0 0;
+        }
+
+        thead:last-child tr:last-child th:first-child,
+        tbody:last-child tr:last-child td:first-child {
+            border-radius: 0 0 0 4px;
+        }
+    </style>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-heading">
+                    <br>
+                    <h6>Pacientes</h6>
+                    <h2>Lista de Medicamentos</h2>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-6">
+                <table id="tabla-pacientes">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Gramaje</th>
+                            <th>Tipo</th>
+                            <th>Cada Cuantas Horas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+          <div class="col-lg-12">
+            <p>Copyright © 2023 MedicineRing. All rights reserved. &nbsp;&nbsp;&nbsp; Design: <a
+                href="://www.linkedin.com/in/nahuel-javier-rubio-prada-4500b4139/" rel="nofollow" target="_blank">Nahuel
+                Rubio Prada</a></p>
+                <p> <a href="inicio_sesion_medico.html" rel="nofollow" >Iniciar sesion medico</a></p>
+                <p> <a href="registro_medico.html" rel="nofollow">Registrar sesion medico</a></p>
+    
+          </div>
+    
+        </div>
+      </footer>
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>

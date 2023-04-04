@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Importamos jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Firebase Storage
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-storage.js"></script> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+
+
+    <title>MedicineRing</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-scholar copy.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+
+
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <h1>MedicineRing</h1>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html">Inicio</a></li>
+                            <li class="scroll-to-section"><a href="about_us.html">Sobre nosotros</a></li>
+                            <li class="scroll-to-section"><a href="inicio_sesion.html">Iniciar Sesion</a></li>
+                            <li class="scroll-to-section"><a href="registro.html" class="active">Registrate!</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <div class="main-banner" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="owl-carousel owl-banner">
+                        <div class="header-text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-us section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6  align-self-center">
+                    <div class="section-heading">
+                        <h6>Registrate </h6>
+                        <h2></h2>
+                        <p>Registrate y añade todos los medicamentos a tus pacientes en tan solo unos segundos.</p>
+                        <br>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-us-content">
+                        <form id="contact-form" action="" method="post">
+                            <div class="row">
+                                <div class="col-lg-6">
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <br>
+                                    <h4>Email</h4>
+                                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
+                                        placeholder="Email" required="">
+                                </fieldset>
+                                <fieldset>
+                                    <div id="nom-field">
+                                        <h4>Nombre</h4>
+                                        <input type="text" name="usuario" id="usuario" placeholder="Nombre" required="">
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <div id="nom-field">
+                                        <h4>Apellido</h4>
+                                        <input type="text" name="lastname" id="lastname" placeholder="Apellido"
+                                            required="">
+                                    </div>
+                                </fieldset>
+
+                            </div>
+
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <h4>Contraseña</h4>
+                                    <input type="password" name="password" id="password" placeholder="Contraseña"
+                                        required>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <button type="submit" id="form-submit" class="orange-button">Registrar</button>
+                                </fieldset>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="col-lg-12">
+                <p>Copyright © 2023 MedicineRing. All rights reserved. &nbsp;&nbsp;&nbsp; Design: <a
+                        href="://www.linkedin.com/in/nahuel-javier-rubio-prada-4500b4139/" rel="nofollow"
+                        target="_blank">Nahuel Rubio Prada</a></p>
+            </div>
+        </div>
+        <div id="snackbar">Los campos son requeridos.</div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+
+</body>
+<!-- Importamos Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<!-- Importamos Firebase 
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth-compat.js"></script>-->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script>
+    // Configuramos Firebase
+    const firebaseConfig = {
+        apiKey: "AIzaSyC33rG5Or8Lz_pe9d-PQ4-24QPYGR2y55o",
+        authDomain: "medicinering.firebaseapp.com",
+        databaseURL: "https://medicinering-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "medicinering",
+        storageBucket: "medicinering.appspot.com",
+        messagingSenderId: "659612075181",
+        appId: "1:659612075181:web:8a3b7c7487655935553224",
+        measurementId: "G-W0L1TCTD61"
+    };
+
+
+    firebase.initializeApp(firebaseConfig);
+
+
+    // Obtener instancia de Firestore
+    //var db = firebase.firestore();
+
+    // Initialize variables
+    var auth = firebase.auth();
+    var database = firebase.database();
+
+
+    var registerBtn = document.getElementById("form-submit");
+    var signupForm = document.getElementById('contact-form');
+
+    registerBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const email = signupForm['email'].value;
+        const name = signupForm['usuario'].value;
+        const lastname = signupForm['lastname'].value;
+        const password = signupForm['password'].value;
+
+        if (!email || !name || !password) {
+            console.log("Los campos son requeridos");
+            var snackbar = document.getElementById("snackbar");
+            snackbar.textContent = "Los campos son requeridos";
+            snackbar.className = "show";
+
+            setTimeout(function () {
+                snackbar.className = snackbar.className.replace("show", "");
+            }, 3000);
+
+            return;
+        }
+
+        // Move on with Auth
+        auth.createUserWithEmailAndPassword(email, password)
+            .then(function () {
+                // Declare user variable
+                var user = auth.currentUser
+
+                // Add this user to Firebase Database
+                var database_ref = database.ref()
+
+                // Create User data
+                var user_data = {
+                    email: email,
+                    name: name,
+                    lastname: lastname,
+                    id: "",
+                    last_login: Date.now()
+                }
+
+                // Push to Firebase Database
+                database_ref.child('medico/' + user.uid).set(user_data)
+                
+                // DOne
+                //alert('User Created!!')
+                var snackbar = document.getElementById("snackbar");
+                snackbar.textContent = "Cuenta Paciente creada Correctamente!";
+                snackbar.className = "show";
+
+                setTimeout(function () {
+                    snackbar.className = snackbar.className.replace("show", "");
+                }, 3000);
+            })
+            .catch(function (error) {
+                // Firebase will use this to alert of its errors
+                var error_code = error.code
+                var error_message = error.message
+
+                alert(error_message)
+                var snackbar = document.getElementById("snackbar");
+                snackbar.textContent = error_message;
+                snackbar.className = "show";
+                setTimeout(function () {
+                    snackbar.className = snackbar.className.replace("show", "");
+                }, 3000);
+            })
+
+
+
+
+    });
+</script>
+
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Importamos jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Importamos Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-auth-compat.js"></script>
+    <!-- Firebase Storage -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-storage.js"></script>
+
+    <title>MedicineRing</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!--
+
+TemplateMo 586 Scholar
+
+https://templatemo.com/tm-586-scholar
+
+-->
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <h1>MedicineRing</h1>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html">Inicio</a></li>
+                            <li class="scroll-to-section"><a href="about_us.html">Sobre nosotros</a></li>
+                            <li class="scroll-to-section"><a href="inicio_sesion.html" class="active">Iniciar Sesion</a>
+                            </li>
+                            <li class="scroll-to-section"><a href="registro.html">Registrate!</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <div class="main-banner" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="owl-carousel owl-banner">
+                        <div class="header-text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact-us section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6  align-self-center">
+                    <div class="section-heading">
+                        <h6>Iniciar sesión </h6>
+                        <h2></h2>
+                        <p>Inicie sesion y añada medicamentos, citas medicas y agreguelas a Google Calendar.</p>
+                        <br>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-us-content">
+                        <form id="contact-form" action="" method="post">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <h4>Tipo de Usuario</h4>
+                                        <br>
+                                        <select name="user-type" id="user-type">
+                                            <option value="medico">Soy Medico</option>
+                                            <option value="paciente">Soy Paciente</option>
+                                        </select>
+                                    </fieldset>
+                                    <br>
+                                    <fieldset>
+                                        <h4>Email</h4>
+                                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
+                                            placeholder="Email" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <h4>Contraseña</h4>
+                                        <input type="password" name="password" id="password" placeholder="Contraseña"
+                                            required>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="orange-button">Iniciar
+                                            Sesión</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="col-lg-12">
+                <p>Copyright © 2023 MedicineRing. All rights reserved. &nbsp;&nbsp;&nbsp; Design: <a
+                        href="://www.linkedin.com/in/nahuel-javier-rubio-prada-4500b4139/" rel="nofollow"
+                        target="_blank">Nahuel Rubio Prada</a></p>
+            </div>
+        </div>
+    </footer>
+    <div id="snackbar">Los campos son requeridos.</div>
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        // Configuramos Firebase
+        var firebaseConfig = {
+            apiKey: "AIzaSyC33rG5Or8Lz_pe9d-PQ4-24QPYGR2y55o",
+            authDomain: "medicinering.firebaseapp.com",
+            projectId: "medicinering",
+            storageBucket: "medicinering.appspot.com",
+            messagingSenderId: "659612075181",
+            appId: "1:659612075181:web:8a3b7c7487655935553224"
+        };
+        firebase.initializeApp(firebaseConfig);
+        // Obtener instancia de Firestore
+        var db = firebase.firestore();
+
+        $(document).ready(function () {
+            // Obtener referencia al formulario
+            var $form = $('#contact-form');
+
+            // Agregar evento de envío de formulario
+            $form.submit(function (event) {
+                // Detener el envío del formulario
+                event.preventDefault();
+
+                // Obtener los valores ingresados en el formulario
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+                var tipoUsuario = document.getElementById('user-type').value;
+                // Hacer una consulta a Firestore para encontrar un documento con el correo electrónico ingresado
+                firebase.firestore().collection(tipoUsuario).where("email", "==", email).get()
+                    .then((querySnapshot) => {
+                        if (querySnapshot.docs.length === 1) {
+                            // Si se encontró un documento, verificar la contraseña
+                            const doc = querySnapshot.docs[0];
+                            if (doc.data().password === password) {
+                                // Las credenciales son correctas
+                                if (document.getElementById('user-type').value == "medico") {
+                                    window.location.replace("indexCorrectoMedico.html");
+
+                                    document.cookie = `id=${doc.data().idMedico}`;
+
+                                } else {
+                                    window.location.replace("indexCorrectoPaciente.html");
+                                    document.cookie = `id=${doc.data().id}`;
+                                }
+
+                            } else {
+                                // La contraseña es incorrecta
+                                console.log("Credenciales inválidas. Por favor, inténtalo de nuevo.");
+                                var snackbar = document.getElementById("snackbar");
+                                snackbar.textContent = "Credenciales inválidas. Inténtalo de nuevo.";
+                                snackbar.className = "show";
+
+                                setTimeout(function () {
+                                    snackbar.className = snackbar.className.replace("show", "");
+                                }, 3000);
+                            }
+                        } else {
+                            // No se encontró ningún documento o se encontraron varios
+                            console.log("No se encontró ningún documento o se encontraron varios");
+                            var snackbar = document.getElementById("snackbar");
+                                snackbar.textContent = "Revise si es paciente o medico.";
+                                snackbar.className = "show";
+
+                                setTimeout(function () {
+                                    snackbar.className = snackbar.className.replace("show", "");
+                                }, 3000);
+                        }
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    });
+            });
+        });
+    </script>
+</body>
+
+</html>
